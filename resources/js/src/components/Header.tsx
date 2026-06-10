@@ -18,6 +18,8 @@ const navItems = [
       { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
       { name: 'VOIP Services', href: '/services/voip-services' },
       { name: 'IT Consultancy', href: '/services/consultancy' },
+      { name: 'AI Automation', href: '/services/ai-automation' },
+      { name: 'AI / ML Development', href: '/services/ai-ml' },
     ]
   },
   { name: 'Portfolio', href: '/portfolio' },

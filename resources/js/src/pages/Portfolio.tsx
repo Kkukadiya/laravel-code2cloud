@@ -58,14 +58,14 @@ const Portfolio = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <span className="inline-block px-4 py-2 rounded-full bg-primary-foreground/10 text-primary-foreground font-medium text-sm mb-6 animate-fade-in">
-                Our Work
+                Our Portfolio — Software, Cloud & AI Projects
               </span>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 animate-slide-up">
-                Projects That
-                <span className="text-accent"> Shipped</span>
+                Real Products,
+                <span className="text-accent"> Shipped Worldwide</span>
               </h1>
               <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-                Every project here is live and serving real users. These are not concepts or mockups — they are working products we helped bring to life.
+                A showcase of live web apps, mobile applications, cloud platforms and AI solutions Codes2cloud has delivered for startups and enterprises across the <strong>USA, UK, UAE, Canada and Australia</strong>. Every project below is in production, serving real users.
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-8">
                 <Button variant="coral" size="lg" asChild>

@@ -25,7 +25,12 @@ import {
   Target,
   FileCode,
   Layers,
-  Monitor
+  Monitor,
+  Bot,
+  Brain,
+  Workflow,
+  Cpu,
+  Sparkles
 } from 'lucide-react';
 
 // Services Data
@@ -33,9 +38,9 @@ const servicesData = {
   'web-development': {
     icon: Code,
     title: 'Web Development',
-    subtitle: 'Custom Web Solutions That Drive Results',
-    description: 'Whether you need an engaging customer-facing website or a complex web application, we deliver exceptional digital experiences that transform your business.',
-    heroDescription: 'We build responsive, scalable, and high-performance websites using the latest technologies. Our expert team ensures your web presence is modern, secure, and optimized for success.',
+    subtitle: 'Custom Web Development Services That Drive Measurable Growth',
+    description: 'Codes2cloud is a custom web development company building fast, secure and SEO-ready websites and web applications for clients across the USA, UK, UAE, Canada and Australia.',
+    heroDescription: 'From corporate websites and SaaS platforms to enterprise web applications and headless commerce, our web development team delivers responsive, accessible and high-performance experiences engineered on React, Next.js, Node.js, Laravel and WordPress — optimised for Core Web Vitals, search visibility and conversions.',
     expertise: [
       'Expertise in HTML, CSS, JavaScript, and responsive designs ensures aesthetic and functional interfaces.',
       'Proficiency in server-side languages like PHP, Node.js, Python, and databases like MySQL and MongoDB allows for robust, scalable application architecture.',
@@ -68,9 +73,9 @@ const servicesData = {
   'mobile-apps': {
     icon: Smartphone,
     title: 'Mobile App Development',
-    subtitle: 'Native & Cross-Platform Mobile Solutions',
-    description: 'Build powerful mobile applications that engage users and drive business growth across iOS and Android platforms.',
-    heroDescription: 'From concept to launch, we create intuitive mobile experiences that users love. Our apps are built for performance, scalability, and exceptional user experience.',
+    subtitle: 'iOS, Android & Cross-Platform Mobile App Development Services',
+    description: 'Codes2cloud builds high-performance native and cross-platform mobile apps for startups, SMEs and enterprises across the USA, UK, UAE, Canada and Australia.',
+    heroDescription: 'From concept and UX to App Store and Play Store launch, our mobile app developers engineer scalable iOS and Android products using Swift, Kotlin, React Native and Flutter — integrated with secure APIs, payments, real-time data and analytics for measurable user growth.',
     expertise: [
       'Expert development in Swift, Kotlin, React Native, and Flutter for cross-platform solutions.',
       'Deep understanding of mobile UX patterns and platform-specific guidelines.',
@@ -103,9 +108,9 @@ const servicesData = {
   'design': {
     icon: Palette,
     title: 'UI/UX Design',
-    subtitle: 'User-Centered Design That Converts',
-    description: 'Create memorable digital experiences with our user-centered design approach that combines aesthetics with functionality.',
-    heroDescription: 'We transform complex ideas into intuitive interfaces. Our design process focuses on understanding user needs and creating experiences that delight and convert.',
+    subtitle: 'User-Centred UI/UX Design Services That Convert',
+    description: 'A specialist UI/UX design agency crafting intuitive, accessible and conversion-driven digital experiences for SaaS, mobile and enterprise clients worldwide.',
+    heroDescription: 'Our designers blend user research, journey mapping, wireframing, prototyping and visual design in Figma to deliver interfaces that look beautiful and perform — built to WCAG accessibility standards and validated with real users across the USA, UK, UAE, Canada and Australia.',
     expertise: [
       'Deep expertise in user research, usability testing, and human-centered design principles.',
       'Proficiency in Figma, Sketch, Adobe XD, and prototyping tools.',
@@ -138,9 +143,9 @@ const servicesData = {
   'cloud-solutions': {
     icon: Cloud,
     title: 'Cloud Solutions',
-    subtitle: 'Scalable Cloud Infrastructure',
-    description: 'Transform your business with scalable, secure cloud solutions that reduce costs and increase operational efficiency.',
-    heroDescription: 'We help organizations leverage cloud technologies for digital transformation. From migration to optimization, we ensure your cloud journey is smooth and successful.',
+    subtitle: 'AWS, Azure & GCP Cloud Consulting and DevOps Services',
+    description: 'Secure, scalable cloud infrastructure, migration and DevOps automation for businesses across the USA, UK, UAE, Canada and Australia.',
+    heroDescription: 'Codes2cloud helps organisations modernise on AWS, Microsoft Azure and Google Cloud — covering cloud migration, multi-region architecture, Kubernetes, CI/CD pipelines, infrastructure-as-code, FinOps and 24/7 managed cloud services that cut downtime and cloud spend.',
     expertise: [
       'Expert cloud architecture design on AWS, Azure, and Google Cloud Platform.',
       'DevOps practices including CI/CD pipelines, containerization, and infrastructure as code.',
@@ -173,9 +178,9 @@ const servicesData = {
   'voip-services': {
     icon: Phone,
     title: 'VOIP Services',
-    subtitle: 'Enterprise Communication Solutions',
-    description: 'Enterprise-grade voice over IP solutions for seamless business communication worldwide with crystal-clear quality.',
-    heroDescription: 'Revolutionize your business communication with our advanced VOIP solutions. We provide reliable, cost-effective voice services that keep your team connected globally.',
+    subtitle: 'Enterprise VOIP, SIP Trunking & Cloud Telephony Solutions',
+    description: 'Reliable, cost-effective business VOIP and unified communications solutions deployed for call centres, BPOs and enterprises in the USA, UK, UAE, Canada and Australia.',
+    heroDescription: 'From cloud PBX and SIP trunking to predictive dialers, WebRTC contact-centre platforms and CRM-integrated softphones, our VOIP engineers deliver crystal-clear voice, video and messaging that scales globally while reducing telecom costs.',
     expertise: [
       'Extensive experience in deploying enterprise VOIP systems and PBX solutions.',
       'Integration with CRM systems, call center software, and unified communications platforms.',
@@ -208,9 +213,9 @@ const servicesData = {
   'consultancy': {
     icon: Users,
     title: 'IT Consultancy',
-    subtitle: 'Strategic Technology Advisory',
-    description: 'Get expert guidance on technology strategy, digital transformation, and IT optimization to drive your business forward.',
-    heroDescription: 'Our experienced consultants help you navigate the complex technology landscape. We provide strategic advice that aligns technology investments with business objectives.',
+    subtitle: 'Strategic IT Consulting & Digital Transformation Services',
+    description: 'Independent IT consulting and digital transformation advisory for growing businesses and enterprises across the USA, UK, UAE, Canada and Australia.',
+    heroDescription: 'Our senior consultants help CXOs align technology with business goals — covering IT strategy, cloud roadmap, software modernisation, process automation, vendor evaluation and architecture reviews that turn IT spend into measurable competitive advantage.',
     expertise: [
       'Deep industry knowledge across fintech, healthcare, e-commerce, and enterprise sectors.',
       'Expertise in digital transformation, process automation, and technology modernization.',
@@ -238,6 +243,76 @@ const servicesData = {
       { icon: Target, title: 'Goal-Oriented', desc: 'Business-aligned solutions' },
       { icon: Users, title: 'Collaborative', desc: 'Partnership approach' },
       { icon: BarChart, title: 'Results-Driven', desc: 'Measurable outcomes' },
+    ]
+  },
+  'ai-automation': {
+    icon: Bot,
+    title: 'AI Automation',
+    subtitle: 'AI Automation & Intelligent Workflow Services',
+    description: 'AI-powered automation, chatbots and intelligent agents that eliminate repetitive work for teams across the USA, UK, UAE, Canada and Australia.',
+    heroDescription: 'We design and deploy production-grade AI automation — LLM-powered chatbots, RPA workflows, document processing agents and CRM/ERP integrations using OpenAI, Anthropic, LangChain, n8n and Zapier — so your team spends less time on manual work and more on growth.',
+    expertise: [
+      'Hands-on experience building AI agents, RPA workflows, and intelligent chatbots that integrate with your existing stack.',
+      'Deep knowledge of LLM orchestration, prompt engineering, and tool-use patterns with OpenAI, Anthropic, and open-source models.',
+      'Proven delivery of automations across sales, support, finance, and operations that reduce manual hours and error rates.'
+    ],
+    solutions: [
+      { title: 'AI Chatbots & Assistants', desc: 'Conversational agents for support, sales, and internal knowledge bases.' },
+      { title: 'Workflow Automation', desc: 'Connect SaaS tools and automate multi-step business processes end to end.' },
+      { title: 'Document Processing', desc: 'Extract, classify, and route information from invoices, contracts, and forms.' },
+      { title: 'Sales & Marketing Automation', desc: 'Lead scoring, outreach, and CRM enrichment powered by AI.' },
+      { title: 'Customer Support AI', desc: 'Ticket triage, smart replies, and AI-assisted agents for faster resolution.' },
+      { title: 'Custom AI Agents', desc: 'Goal-driven agents that plan, use tools, and complete tasks autonomously.' },
+    ],
+    technologies: ['OpenAI', 'LangChain', 'n8n', 'Zapier', 'Make', 'Python', 'Node.js', 'Pinecone'],
+    process: [
+      { step: '01', title: 'Audit', desc: 'Map current workflows and automation opportunities' },
+      { step: '02', title: 'Design', desc: 'Blueprint the automation and AI architecture' },
+      { step: '03', title: 'Integrate', desc: 'Connect APIs, data sources, and tools' },
+      { step: '04', title: 'Build', desc: 'Develop agents, prompts, and workflow logic' },
+      { step: '05', title: 'Test', desc: 'Validate accuracy, safety, and edge cases' },
+      { step: '06', title: 'Scale', desc: 'Monitor, optimize, and expand coverage' },
+    ],
+    features: [
+      { icon: Workflow, title: 'End-to-End', desc: 'Full process automation' },
+      { icon: Zap, title: 'Faster Operations', desc: 'Hours back to your team' },
+      { icon: Shield, title: 'Reliable', desc: 'Guardrails and oversight built-in' },
+      { icon: Sparkles, title: 'Adaptive', desc: 'Learns and improves over time' },
+    ]
+  },
+  'ai-ml': {
+    icon: Brain,
+    title: 'AI / ML Development',
+    subtitle: 'Custom AI & Machine Learning Development Services',
+    description: 'End-to-end AI and machine learning development — from predictive models and computer vision to generative AI and MLOps — for clients in the USA, UK, UAE, Canada and Australia.',
+    heroDescription: 'Codes2cloud builds production-ready AI/ML systems including custom LLM apps, RAG pipelines, recommendation engines, demand forecasting and computer vision — engineered on PyTorch, TensorFlow, Hugging Face, AWS SageMaker and Vertex AI with full MLOps, monitoring and responsible-AI guardrails.',
+    expertise: [
+      'Strong foundation in supervised, unsupervised, and deep learning across tabular, text, image, and time-series data.',
+      'Production MLOps experience: training pipelines, model serving, versioning, and continuous evaluation.',
+      'Applied expertise in LLMs, RAG architectures, fine-tuning, and computer vision for real-world business problems.'
+    ],
+    solutions: [
+      { title: 'Predictive Analytics', desc: 'Forecast demand, churn, and revenue with custom ML models.' },
+      { title: 'Recommendation Engines', desc: 'Personalized product, content, and search recommendations.' },
+      { title: 'Computer Vision', desc: 'Image classification, object detection, OCR, and quality inspection.' },
+      { title: 'Natural Language Processing', desc: 'Sentiment, summarization, classification, and entity extraction.' },
+      { title: 'Generative AI & LLMs', desc: 'Custom GPT apps, RAG systems, and fine-tuned domain models.' },
+      { title: 'MLOps & Deployment', desc: 'Robust pipelines for training, serving, and monitoring models in production.' },
+    ],
+    technologies: ['Python', 'TensorFlow', 'PyTorch', 'Hugging Face', 'scikit-learn', 'AWS SageMaker', 'Vertex AI', 'MLflow'],
+    process: [
+      { step: '01', title: 'Discovery', desc: 'Define problem, success metrics, and ROI' },
+      { step: '02', title: 'Data Prep', desc: 'Collect, clean, and engineer features' },
+      { step: '03', title: 'Modeling', desc: 'Train and evaluate candidate models' },
+      { step: '04', title: 'Validation', desc: 'Test on real-world data and bias checks' },
+      { step: '05', title: 'Deployment', desc: 'Ship to production with scalable serving' },
+      { step: '06', title: 'Monitor', desc: 'Track drift, retrain, and improve' },
+    ],
+    features: [
+      { icon: Brain, title: 'Custom Models', desc: 'Built for your data and goals' },
+      { icon: Cpu, title: 'Production-Ready', desc: 'Scalable serving and MLOps' },
+      { icon: BarChart, title: 'Measurable ROI', desc: 'Tied to business outcomes' },
+      { icon: Shield, title: 'Responsible AI', desc: 'Fair, explainable, and secure' },
     ]
   },
 };
@@ -285,6 +360,20 @@ const allServices = [
     title: 'IT Consultancy',
     description: 'Expert guidance on technology strategy, digital transformation, and IT optimization.',
     features: ['Technology Strategy', 'Digital Transformation', 'Process Automation', 'IT Roadmap'],
+  },
+  {
+    slug: 'ai-automation',
+    icon: Bot,
+    title: 'AI Automation',
+    description: 'Automate repetitive workflows with AI agents, chatbots, and intelligent process automation.',
+    features: ['AI Chatbots', 'Workflow Automation', 'Document Processing', 'Custom AI Agents'],
+  },
+  {
+    slug: 'ai-ml',
+    icon: Brain,
+    title: 'AI / ML Development',
+    description: 'Custom machine learning models, predictive analytics, and generative AI built for production.',
+    features: ['Predictive Analytics', 'Computer Vision', 'NLP & LLMs', 'MLOps & Deployment'],
   },
 ];
 

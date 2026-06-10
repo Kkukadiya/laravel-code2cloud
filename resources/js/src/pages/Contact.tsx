@@ -35,14 +35,14 @@ const Contact = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <span className="inline-block px-4 py-2 rounded-full bg-primary-foreground/10 text-primary-foreground font-medium text-sm mb-6 animate-fade-in">
-                Get In Touch
+                Contact Codes2cloud — Global Software Development Partner
               </span>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 animate-slide-up">
-                Let's Talk About
-                <span className="text-accent"> Your Project</span>
+                Let's Build Your Next
+                <span className="text-accent"> Digital Product</span>
               </h1>
               <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-                Whether you have a specific project in mind or just want to explore possibilities, drop us a line. We respond to every inquiry within one business day.
+                Talk to our software development, cloud and AI experts about your project. We work with clients across the <strong>USA, UK, UAE, Canada and Australia</strong> and respond to every enquiry within one business day.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Button variant="coral" size="lg" asChild>

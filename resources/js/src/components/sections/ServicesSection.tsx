@@ -1,4 +1,4 @@
-import { Code, Smartphone, Palette, Cloud, Phone, Users, ArrowRight } from 'lucide-react';
+import { Code, Smartphone, Palette, Cloud, Phone, Users, ArrowRight, Bot, Brain } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
@@ -50,6 +50,22 @@ const services = [
     features: ['Tech Stack Review', 'Architecture Planning', 'Vendor Selection'],
     color: 'gold',
   },
+  {
+    slug: 'ai-automation',
+    icon: Bot,
+    title: 'AI Automation',
+    description: 'Automate the busywork. We build AI agents, chatbots, and end-to-end workflow automations that give your team hours back every week.',
+    features: ['AI Chatbots & Agents', 'Workflow Automation', 'Document Processing'],
+    color: 'accent',
+  },
+  {
+    slug: 'ai-ml',
+    icon: Brain,
+    title: 'AI / ML Development',
+    description: 'Turn your data into a competitive edge. Custom ML models, predictive analytics, computer vision, and generative AI built for production.',
+    features: ['Predictive Analytics', 'Computer Vision & NLP', 'Custom LLM & RAG Apps'],
+    color: 'teal',
+  },
 ];
 
 const colorClasses = {
@@ -88,13 +104,13 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm mb-4">
-            How We Can Help
+            End-to-End Software Development Services
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Our <span className="text-accent">Services</span>
+            Our <span className="text-accent">Expertise</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Every business has different technology needs. Here is what we do best — pick what matters most to you, and we will handle the rest.
+            From custom web and mobile app development to cloud engineering, VOIP and AI automation — Codes2cloud partners with startups, SMEs and enterprises across the <strong>USA, UK, UAE, Canada and Australia</strong> to ship reliable, scalable, search-friendly digital products.
           </p>
         </div>
 

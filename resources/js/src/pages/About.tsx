@@ -140,14 +140,14 @@ const About = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <span className="inline-block px-4 py-2 rounded-full bg-primary-foreground/10 text-primary-foreground font-medium text-sm mb-6 animate-fade-in">
-                About Codes2cloud
+                About Codes2cloud — Global Software Development Company
               </span>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 animate-slide-up">
-                Building Software
-                <span className="text-accent"> Since 2009</span>
+                Engineering Trusted Digital Products
+                <span className="text-accent"> Worldwide</span>
               </h1>
               <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-                We are a team of developers, designers, and cloud architects who care about building things that work. Simple as that.
+                Codes2cloud is a full-stack software development company helping startups and enterprises across the <strong>USA, UK, UAE, Canada and Australia</strong> design, build and scale custom web apps, mobile applications, cloud infrastructure and AI-powered automation.
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-8">
                 <Button variant="coral" size="lg" asChild>
@@ -195,13 +195,13 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Over 15 years, we have worked with startups launching their first product and enterprises modernizing decade-old systems. The common thread? Every client needed software that did more than just exist — it needed to work reliably, scale gracefully, and solve real business problems.
+                  For over 15 years, Codes2cloud has delivered <strong>custom software development, cloud engineering and AI automation services</strong> to founders launching their first MVP and enterprises modernising legacy platforms. Every engagement is built on the same promise — software that is reliable, scalable, and measurably tied to your business outcomes.
                 </p>
                 <p>
-                  Our team operates from offices in India, Canada, and New Zealand. This global footprint means someone is always available during your business hours, whether you are in Sydney, San Francisco, or London.
+                  With delivery teams operating across <strong>India, Canada and New Zealand</strong>, we provide near-time-zone coverage for clients in the <strong>United States, United Kingdom, United Arab Emirates and Australia</strong>. That means real conversations during your working hours — whether you are in New York, London, Dubai, Toronto or Sydney.
                 </p>
                 <p>
-                  We are not the cheapest option and we do not pretend to be. But if you want software built by people who genuinely care about the outcome, we are worth a conversation.
+                  We are not the cheapest software development agency, and we do not aim to be. We are the long-term technology partner you call when the project actually has to ship, perform, and rank.
                 </p>
               </div>
               </div>

@@ -4,7 +4,7 @@ const reasons = [
   {
     icon: Shield,
     title: 'Battle-Tested Experience',
-    description: '500+ projects shipped since 2009. We have seen what works and what does not across dozens of industries.',
+    description: '500+ projects shipped across dozens of industries. We have seen what works and what does not at every stage of growth.',
   },
   {
     icon: Clock,

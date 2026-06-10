@@ -17,7 +17,7 @@ const Footer = () => {
               <Logo variant="light" size="md" />
             </Link>
             <p className="text-primary-foreground/70 leading-relaxed">
-              Software development and cloud solutions for businesses that want to grow. Since 2009, we have helped companies build products that work.
+              Software development and cloud solutions for businesses that want to grow. We help companies across the USA, UK, UAE, Canada and Australia build products that work.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground flex items-center justify-center transition-all duration-300">
@@ -42,14 +42,21 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {['About Us', 'Services', 'Portfolio', 'Blog', 'Careers', 'Contact'].map((link) => (
-                <li key={link}>
+              {[
+                { label: 'About Us', href: '/about' },
+                { label: 'Services', href: '/services' },
+                { label: 'Portfolio', href: '/portfolio' },
+                { label: 'Blog', href: '/blog' },
+                { label: 'Careers', href: '/careers' },
+                { label: 'Contact', href: '/contact' },
+              ].map((link) => (
+                <li key={link.label}>
                   <Link 
-                    to={`/${link.toLowerCase().replace(' ', '-')}`}
+                    to={link.href}
                     className="text-primary-foreground/70 hover:text-accent flex items-center gap-2 group transition-colors"
                   >
                     <ArrowRight className="w-4 h-4 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
-                    {link}
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -67,6 +74,8 @@ const Footer = () => {
                 { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
                 { name: 'VOIP Services', href: '/services/voip-services' },
                 { name: 'IT Consultancy', href: '/services/consultancy' },
+                { name: 'AI Automation', href: '/services/ai-automation' },
+                { name: 'AI / ML Development', href: '/services/ai-ml' },
               ].map((service) => (
                 <li key={service.name}>
                   <Link 
@@ -103,17 +112,6 @@ const Footer = () => {
                   <MapPin className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
                   <span className="text-primary-foreground/70 text-sm">
                     456 Innovation Blvd, Toronto, ON M5V 2T6
-                  </span>
-                </div>
-              </div>
-              
-              {/* New Zealand Office */}
-              <div>
-                <h5 className="font-semibold text-accent text-sm mb-2">🇳🇿 New Zealand</h5>
-                <div className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-                  <span className="text-primary-foreground/70 text-sm">
-                    789 Digital Lane, Auckland CBD 1010
                   </span>
                 </div>
               </div>
