@@ -9,6 +9,11 @@
     <meta name="keywords" content="software development company, custom software development, web development company, mobile app development, cloud solutions, AWS cloud consulting, DevOps services, VOIP solutions, AI automation services, AI and machine learning development, UI UX design agency, IT consulting services, React development, Node.js development, Laravel development, hire developers, offshore software development, enterprise software development, SaaS development company, digital transformation services" />
     <meta name="author" content="Codes2cloud" />
     
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Codes2cloud | Custom Software, Web, Mobile, Cloud &amp; AI Development Company">
     <meta name="twitter:title" content="Codes2cloud | Custom Software, Web, Mobile, Cloud &amp; AI Development Company">
